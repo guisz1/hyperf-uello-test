@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+
+  hyperf-php:
+    container_name: uello-php
+    image: hyperf/hyperf:8.1-alpine-v3.15-swoole
+    working_dir: /app
+    entrypoint: ["php", "bin/hyperf.php", "server:watch"]
+    volumes:
+      - ./:/app
+    ports:
+      - 9501:9501
+    depends_on:
+      - hyperf-db
+
+  hyperf-db:
+    container_name: uello-db
+    image: mariadb:latest
+    volumes:
+      - ./.docker/mariadb:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
+      MYSQL_DATABASE: "hyperf-skeleton"
