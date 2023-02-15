@@ -1,5 +1,5 @@
 {
-    "name": "hyperf/hyperf-skeleton",
+    "name": "guisz1/hyperf-uello-test",
     "type": "project",
     "keywords": [
         "php",
@@ -76,5 +76,12 @@
             "Composer\\Config::disableProcessTimeout",
             "php ./bin/hyperf.php start"
         ]
-    }
+    },
+    "authors": [
+        {
+            "name": "Guilherme S. Zulian",
+            "email": "guilhermesz873@gmail.com",
+            "homepage":"https://www.linkedin.com/in/guisz1"
+        }
+    ]
 }
