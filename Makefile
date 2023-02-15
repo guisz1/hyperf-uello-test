@@ -5,4 +5,7 @@ down:
 php:
 	docker exec -it uello-php bash
 db:
-	docker exec -it uello-db mysql -uroot -psecret 
+	docker exec -it uello-db mysql -uroot -psecret uello
+migrate:
+	docker container exec -it uello-php php bin/hyperf.php migrate
+
