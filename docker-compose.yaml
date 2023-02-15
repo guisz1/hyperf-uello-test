@@ -5,6 +5,7 @@ services:
   hyperf-php:
     container_name: uello-php
     image: hyperf/hyperf:8.1-alpine-v3.15-swoole
+    user: 1000:1000
     working_dir: /app
     entrypoint: ["php", "bin/hyperf.php", "server:watch"]
     volumes:

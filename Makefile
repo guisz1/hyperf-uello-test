@@ -8,4 +8,6 @@ db:
 	docker exec -it uello-db mysql -uroot -psecret uello
 migrate:
 	docker container exec -it uello-php php bin/hyperf.php migrate
+migration:
+	docker container exec -it uello-php php bin/hyperf.php gen:migration $(name)
 
