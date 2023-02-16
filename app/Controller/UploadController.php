@@ -26,8 +26,7 @@ class UploadController extends AbstractController
                 'client_id.int' => 'necessario ser um inteiro',
             ]
         );
-        if ($validator->fails() || is_null($data))
-        {
+        if ($validator->fails() || is_null($data)) {
             $error = $validator->errors()->first();
             $result = [
                 "message"=> is_null($data) ? 'Não foi encontrado arquivo' : $error 
@@ -53,8 +52,7 @@ class UploadController extends AbstractController
         $header = [];
         while (($line = fgetcsv($fp,null,';')) !== FALSE) 
         {
-            if($isSetHeader == false)
-            {
+            if ($isSetHeader == false) {
                 $header = $line;
                 $isSetHeader = true;
                 continue;
@@ -62,8 +60,7 @@ class UploadController extends AbstractController
             $cleaned = $this->cleanupBody($line);
             $merged = $this->mergeHeaderWithBody($header, $cleaned);
             $invalid = $this->validateData($merged);
-            if(!$invalid)
-            {
+            if (!$invalid) {
                 $this->save($merged, $clientId);
             }
         }
@@ -74,7 +71,7 @@ class UploadController extends AbstractController
     private function cleanupBody(array $body): array
     {
         $cleaned = [];
-        foreach($body as $element){
+        foreach ($body as $element) {
             $cleaned[]= str_replace(",",".", str_replace(".","",$element));
         }
         return $cleaned;

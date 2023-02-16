@@ -11,7 +11,8 @@ class ClientsFreights extends Migration
      */
     public function up(): void
     {
-        Schema::create('freights_clients', function (Blueprint $table) {
+        Schema::create('freights_clients', function (Blueprint $table) 
+        {
             $table->unsignedInteger('client_id');
             $table->unsignedInteger('freight_id');
             $table->timestamps();

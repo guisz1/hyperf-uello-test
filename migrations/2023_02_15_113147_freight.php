@@ -11,7 +11,8 @@ class Freight extends Migration
      */
     public function up(): void
     {
-        Schema::create('freights', function (Blueprint $table) {
+        Schema::create('freights', function (Blueprint $table) 
+        {
             $table->increments('id');
             $table->decimal('from_weight', 8, 2);
             $table->decimal('to_weight', 8, 2);

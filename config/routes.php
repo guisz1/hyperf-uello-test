@@ -15,14 +15,16 @@ use App\Controller\FreightController;
 use App\Controller\UploadController;
 use Hyperf\HttpServer\Router\Router;
 
-Router::addGroup('/clients', function () {
+Router::addGroup('/clients', function () 
+{
     Router::get('', [ClientController::class, 'index']);
     Router::get('/{id}', [ClientController::class, 'show']);
     Router::post('', [ClientController::class, 'store']);
     Router::delete('/{id}', [ClientController::class, 'delete']);
 });
 
-Router::addGroup('/freightage', function () {
+Router::addGroup('/freightage', function () 
+{
     Router::get('', [FreightController::class, 'index']);
     Router::get('/{id}', [FreightController::class, 'show']);
 });

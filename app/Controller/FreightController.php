@@ -19,8 +19,7 @@ class FreightController extends AbstractController
     public function show(int $id): PsrResponseInterface
     {
         $freight = Freight::find($id);
-        if(!isset($freight))
-        {
+        if (!isset($freight)) {
             return $this->response->raw('')->withStatus(204);    
         }
         return $this->response->json($freight);
