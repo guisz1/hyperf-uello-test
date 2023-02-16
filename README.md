@@ -43,7 +43,7 @@ Temos alguns comandos disponiveis que criei para etapa de desenvolvimento e para
 2. Vamos agora criar as tabelas no banco de dados
 ``make migrate``
 
-Agora se tudo deu certo o projeto já esta up e pronto para utilizar, foi disponibilizado um postman para teste das rotas. obs: alterar o ip
+Agora se tudo deu certo o projeto já esta up e pronto para utilizar, foi disponibilizado um postman para teste das rotas. ``obs: alterar o ip``
 
 Devemos observar que o upload e processamento do csv esta assincrono, então os dados vão ser disponibilizados aos poucos, se verificar o terminal do docker-compose vera que ele se encontra inserções e com o comando ``SELECT count(*) from freights; `` vera a quantidade aumentando
 
