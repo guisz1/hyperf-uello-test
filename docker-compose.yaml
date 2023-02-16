@@ -16,6 +16,7 @@ services:
 
   hyperf-db:
     container_name: uello-db
+    command: [ "--max_connections=1001" ]
     image: mariadb:latest
     volumes:
       - ./.docker/mariadb:/var/lib/mysql

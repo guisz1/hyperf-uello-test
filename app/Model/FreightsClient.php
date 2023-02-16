@@ -6,9 +6,7 @@ class FreightsClient extends Model
 {
     public string $keyType = 'int';
 
-    public bool $incrementing = true;
-
-    protected array $fillable = ['id', 'client_id', 'freight_id', 'created_at', 'updated_at'];
+    protected array $fillable = ['client_id', 'freight_id', 'created_at', 'updated_at'];
 
     public function client()
     {

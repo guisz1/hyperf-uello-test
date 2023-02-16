@@ -64,10 +64,7 @@ class UploadController extends AbstractController
             $invalid = $this->validateData($merged);
             if(!$invalid)
             {
-                go(function() use ($merged, $clientId) 
-                {
-                    $this->save($merged, $clientId);
-                });
+                $this->save($merged, $clientId);
             }
         }
         fclose($fp); 

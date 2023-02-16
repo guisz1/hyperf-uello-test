@@ -13,10 +13,10 @@ class Freight extends Migration
     {
         Schema::create('freights', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('client_id');
-            $table->string('freight_id');
             $table->decimal('from_weight', 8, 2);
             $table->decimal('to_weight', 8, 2);
+            $table->string('from_postcode');
+            $table->string('to_postcode');
             $table->double('cost', 15, 2);
             $table->timestamps();
         });
