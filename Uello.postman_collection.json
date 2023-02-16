@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "23a47ae4-8370-4184-80ae-859b223425d0",
+		"name": "Uello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7708344"
+	},
+	"item": [
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "GetById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://172.23.246.124:9501/clients/1",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"246",
+								"124"
+							],
+							"port": "9501",
+							"path": [
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://172.23.246.124:9501/clients",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"246",
+								"124"
+							],
+							"port": "9501",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "mercado livre",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://172.23.246.124:9501/clients",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"246",
+								"124"
+							],
+							"port": "9501",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://172.23.246.124:9501/clients/10",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"246",
+								"124"
+							],
+							"port": "9501",
+							"path": [
+								"clients",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Freights",
+			"item": [
+				{
+					"name": "GetById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "jet log",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "a",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://172.23.246.124:9501/freightage/1",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"246",
+								"124"
+							],
+							"port": "9501",
+							"path": [
+								"freightage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "jet log",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "a",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://172.23.246.124:9501/freightage",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"246",
+								"124"
+							],
+							"port": "9501",
+							"path": [
+								"freightage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"type": "file",
+									"src": "/C:/Users/gui/Downloads/tabela_teste.csv"
+								},
+								{
+									"key": "client_id",
+									"value": "11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://172.23.246.124:9501/upload",
+							"protocol": "http",
+							"host": [
+								"172",
+								"23",
+								"246",
+								"124"
+							],
+							"port": "9501",
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
