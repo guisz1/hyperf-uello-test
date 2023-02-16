@@ -20,7 +20,8 @@ class ClientController extends AbstractController
     public function show(int $id): PsrResponseInterface
     {
         $client = Client::find($id);
-        if(!isset($client)){
+        if(!isset($client))
+        {
             return $this->response->raw('')->withStatus(204);    
         }
         return $this->response->json($client);
@@ -39,10 +40,12 @@ class ClientController extends AbstractController
                 'name.required' => 'necessario um nome',
             ]
         );
-        if (!$validator->fails()){
+        if (!$validator->fails())
+        {
             Client::create($validator->validated());
             return $this->response->raw('');
-        }else{
+        }
+        else{
             $error = $validator->errors()->first();
             $result = [
                 "message"=>$error
