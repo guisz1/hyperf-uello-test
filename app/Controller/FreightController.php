@@ -5,14 +5,28 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Freight;
+use Hyperf\HttpServer\Contract\RequestInterface;
 use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 
 class FreightController extends AbstractController
 {
 
-    public function index(): PsrResponseInterface
+    public function index(RequestInterface $request): PsrResponseInterface
     {
-        $freightage =  Freight::get();
+        $data = $request->all();
+        $validator = $this->validationFactory->make(
+            $data,
+            [
+                'limit' => 'int',
+                'page' => 'int'
+            ],
+        );
+        $validated = $validator->validated();
+        $page = !empty($validated['page']) ? $validated['page'] : 1;
+        $limit = !empty($validated['limit']) ? $validated['limit'] : 10;
+        $freightage =  Freight::limit($limit)
+            ->offset(($page - 1) * $limit)
+            ->get();
         return $this->response->json($freightage);
     }
 

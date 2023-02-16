@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "23a47ae4-8370-4184-80ae-859b223425d0",
+		"_postman_id": "4a6d7940-2925-48eb-a833-628bd4301c1c",
 		"name": "Uello",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "7708344"
@@ -9,6 +9,53 @@
 		{
 			"name": "Clients",
 			"item": [
+				{
+					"name": "Freight",
+					"item": [
+						{
+							"name": "GetById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "limit",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://172.23.246.124:9501/clients/freight/1",
+									"protocol": "http",
+									"host": [
+										"172",
+										"23",
+										"246",
+										"124"
+									],
+									"port": "9501",
+									"path": [
+										"clients",
+										"freight",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
 				{
 					"name": "GetById",
 					"protocolProfileBehavior": {
@@ -201,7 +248,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://172.23.246.124:9501/freightage",
+							"raw": "http://172.23.246.124:9501/freightage?limit=10&page=10",
 							"protocol": "http",
 							"host": [
 								"172",
@@ -212,6 +259,16 @@
 							"port": "9501",
 							"path": [
 								"freightage"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "10"
+								}
 							]
 						}
 					},

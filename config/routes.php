@@ -20,6 +20,10 @@ Router::addGroup('/clients', function ()
     Router::get('', [ClientController::class, 'index']);
     Router::get('/{id}', [ClientController::class, 'show']);
     Router::post('', [ClientController::class, 'store']);
+    Router::addGroup('/freight', function () 
+    {
+        Router::get('/{id}', [ClientController::class, 'getFreights']);
+    });
     Router::delete('/{id}', [ClientController::class, 'delete']);
 });
 
