@@ -1,6 +1,6 @@
 # Introdução
 
-Essa é uma atividade que envolve upload de csv e para um ou varios clientes utilizando hyperf e swoole com corotinas.
+Essa é uma atividade que envolve upload de csv para um ou varios clientes utilizando hyperf e swoole com corotinas.
 
 # Tecnologias
 
@@ -13,6 +13,7 @@ Essa é uma atividade que envolve upload de csv e para um ou varios clientes uti
  - make
  - docker
    - docker-compose
+ - git
 
 # Sobre o makefile
 Temos alguns comandos disponiveis que criei para etapa de desenvolvimento e para testes
@@ -34,7 +35,15 @@ Temos alguns comandos disponiveis que criei para etapa de desenvolvimento e para
  - Para rodar todos os testes 
    - $ make reset
 # Utilizando o projeto
-1. Criamos o env
+1. baixando o projeto
+``git clone https://github.com/guisz1/hyperf-uello-test.git``
+1.1 entre na pasta
+``cd hyperf-uello-test``
+1.2 troque a branch para master
+``git checkout master``
+1.3 verificamos se esta tudo certo com um pull
+``git pull``
+1. Criamos o env em seu terminal digite 
 ``cp .env.example .env``
 2. Para iniciar os container basta executar
 ``make up``
