@@ -1,13 +1,13 @@
 # Introdução
 
-Essa é uma atividade que envolve upload de csv e para um ou varios clientes
+Essa é uma atividade que envolve upload de csv e para um ou varios clientes utilizando hyperf e swoole com corotinas.
 
 # Tecnologias
 
-php
-hyperf
-swoole
-mysql/mariadb
+ - php
+ - hyperf
+ - swoole
+ - mysql/mariadb
 
 # Pre-requisitos
  - make
@@ -35,7 +35,7 @@ Temos alguns comandos disponiveis que criei para etapa de desenvolvimento e para
    - $ make reset
 # Utilizando o projeto
 1. Criamos o env
-``cp .env.example .env
+``cp .env.example .env``
 2. Para iniciar os container basta executar
 ``make up``
 
