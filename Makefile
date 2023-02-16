@@ -12,3 +12,5 @@ reset:
 	docker container exec -it uello-php php bin/hyperf.php migrate:reset
 migration:
 	docker container exec -it uello-php php bin/hyperf.php gen:migration $(name)
+teste:
+	docker container exec -it uello-php php vendor/bin/co-phpunit --prepend=test/bootstrap.php 

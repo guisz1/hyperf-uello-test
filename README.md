@@ -2,40 +2,42 @@
 
 Essa é uma atividade que envolve upload de csv e para um ou varios clientes
 
-# tecnologias
+# Tecnologias
 
 php
 hyperf
 swoole
 mysql/mariadb
 
-# pre-requisitos
+# Pre-requisitos
  - make
  - docker
    - docker-compose
 
-# sobre o makefile
+# Sobre o makefile
 Temos alguns comandos disponiveis que criei para etapa de desenvolvimento e para testes
 
-Para subir os containers
-$ make up
-Para derrubar os containers
-$ make dowm
-Para rodar as migrações
-$ make migrate
-Para acessar o container do php
-$ make php
-Para acessar o banco de dados
-$ make db
-Para criar uma nova migração
-$ make migration --name=nome_da_nova_migracao(snake_case)
-Para resetar as migrações 
-$ make reset
-# utilizando o projeto
+ - Para subir os containers
+   - $ make up
+ - Para derrubar os containers
+   - $ make dowm
+ - Para rodar as migrações
+   - $ make migrate
+ - Para acessar o container do php
+   - $ make php
+ - Para acessar o banco de dados
+   - $ make db
+ - Para criar uma nova migração
+   - $ make migration --name=nome_da_nova_migracao(snake_case)
+ - Para resetar as migrações 
+   - $ make reset
+ - Para rodar todos os testes 
+   - $ make reset
+# Utilizando o projeto
 1. Para iniciar os container basta executar
 ``make up``
 
-1.1 abrir outro terminal na mesma pasta e logo em seguida instalar as dependencias composer
+1.1. abrir outro terminal na mesma pasta e logo em seguida instalar as dependencias composer
 ``make install``
 
 2. Vamos agora criar as tabelas no banco de dados
