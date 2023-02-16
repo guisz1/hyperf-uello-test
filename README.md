@@ -34,13 +34,15 @@ Temos alguns comandos disponiveis que criei para etapa de desenvolvimento e para
  - Para rodar todos os testes 
    - $ make reset
 # Utilizando o projeto
-1. Para iniciar os container basta executar
+1. Criamos o env
+``cp .env.example .env
+2. Para iniciar os container basta executar
 ``make up``
 
-1.1. abrir outro terminal na mesma pasta e logo em seguida instalar as dependencias composer
+2.1. abrir outro terminal na mesma pasta e logo em seguida instalar as dependencias composer
 ``make install``
 
-2. Vamos agora criar as tabelas no banco de dados
+3. Vamos agora criar as tabelas no banco de dados
 ``make migrate``
 
 Agora se tudo deu certo o projeto já esta up e pronto para utilizar, foi disponibilizado um postman para teste das rotas. ``obs: alterar o ip``
